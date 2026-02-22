@@ -233,7 +233,10 @@
         }
 
         animate();
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('drop') === '1') {
         dropCoin();
+        }
 
         window.triggerCoinDrop = function() {
             dropCoin();
